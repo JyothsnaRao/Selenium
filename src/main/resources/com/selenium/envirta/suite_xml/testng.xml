@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Regression Test" parallel="tests" thread-count="1">
+
+<parameter name="drivers" value="firefox" />
+<parameter name="environments" value="devenv" />
+		
+<listeners>
+<listener class-name="com.selenium.envirta.utilities.reporters.ExcelReporter" />
+</listeners>
+
+<test name="Name of the Test - Edit Profile Regression Test">
+<parameter name="users" value="dev-user.properties" />
+<parameter name="spreadsheet" value="AutomationTestData" />
+<parameter name="testPath"
+			value="com.selenium.envirta.features.editprofilescenario.EditProfile_RegressionScenario_01" />
+<classes>
+<class name="com.selenium.envirta.utilities.BasicFactory" />
+</classes>
+</test>
+ 
+</suite>
